@@ -1,16 +1,19 @@
 FROM python:3.13-slim
 
-ENV PYTHONUNBUFFERED 1
-
+# Create app directory
 WORKDIR /app
 
-COPY requirements.txt /app/
-RUN pip install -r requirements.txt
+# Install dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . /app/
+# Copy the project
+COPY . .
 
-WORKDIR /app/quiz
-
+# Expose port 8000 for Django
 EXPOSE 8000
 
-CMD ["python", "manage.py", "runserver"]
+# Run migrations & start the server
+CMD ["python", "manage.py", "migrate", "--noinput"]
+# Start the Django dev server (not recommended in production, but for demonstration):
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
