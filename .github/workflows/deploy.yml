@@ -31,6 +31,13 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
+      - name: List files for debugging
+        run: |
+            ls -R
+      
+    #   - name: Setup Virtual Environment
+    #     run: |
+          
 
       - name: Install dependencies
         run: |
