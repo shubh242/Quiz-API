@@ -19,10 +19,12 @@ from django.urls import path, include
 from quiz_api import urls as quiz_urls
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from quiz_api.views import RegisterUserView
+from .views import server_status
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('api-auth/', include('rest_framework.urls')),
+    path('', server_status, name='server_status'),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain'),
     path('api/users/register/', RegisterUserView.as_view(), name='user-register'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_obtain'),
