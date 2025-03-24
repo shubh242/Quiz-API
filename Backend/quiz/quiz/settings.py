@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-o2(_q4j0id#u_^l^minco7yy)n#k5(v0p8=hj3+jbsefru53ne
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'quiz-app-alb-193915209.us-east-1.elb.amazonaws.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'quiz-app-alb-193915209.us-east-1.elb.amazonaws.com', '*']
+ALLOWED_HOSTS += [".compute.amazonaws.com"]
 
 
 # Application definition
@@ -58,6 +59,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "https://quiz-app-alb-193915209.us-east-1.elb.amazonaws.com",
+    "*"
 ]
 CORS_ALLOW_CREDENTIALS = True  
 
