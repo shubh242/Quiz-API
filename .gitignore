@@ -1,0 +1,50 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# ====== Dependencies ======
+frontend/node_modules/
+Backend/quiz/env/
+
+# ====== Python Cache & Virtual Environment ======
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/*.log
+Backend/quiz/venv/
+Backend/quiz/.venv/
+
+# ====== Database & Migrations ======
+Backend/quiz/db.sqlite3
+Backend/quiz/quiz_api/migrations/
+
+# ====== Frontend Build Files ======
+frontend/build/
+
+# ====== Environment Variables ======
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ====== System-Specific Files ======
+.DS_Store
+Thumbs.db
+
+# ====== Logs ======
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ====== Coverage & Test Reports ======
+coverage/
+pytest_cache/
+jest/
+
+# ====== Docker ======
+*.dockerignore
+
+# ====== CI/CD & AWS ======
+.github/workflows/*.log
+terraform.tfstate
+terraform.tfstate.backup
