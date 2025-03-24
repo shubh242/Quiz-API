@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { AppBar, Box, Button, List, ListItem, ListItemText, Toolbar, Typography } from '@mui/material';
+import { AppBar, Box, Button, List, ListItem, Toolbar, Typography } from '@mui/material';
 import { removeAuthToken, isAuthenticated } from './auth'
 
 const NavBar = () => {
