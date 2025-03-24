@@ -31,9 +31,9 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.13.2'
-      - name: List files for debugging
-        run: |
-            ls -R
+    #   - name: List files for debugging
+    #     run: |
+    #         ls -R
       
     #   - name: Setup Virtual Environment
     #     run: |
@@ -45,11 +45,11 @@ jobs:
 
       - name: Run Django Migrations
         run: |
-          python Backend/manage.py migrate
+          python Backend/quiz/manage.py migrate
 
       - name: Run Tests
         run: |
-          python Backend/manage.py test
+          python Backend/quiz/manage.py test
 
       - name: Build & Push Docker Image
         run: |
