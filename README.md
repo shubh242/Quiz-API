@@ -3,7 +3,7 @@
 Directions to run the project
 
 - Open one terminal for backend api and go to the backend folder
-        cd Backend/
+        cd backend/
 
 - Install all the dependencies using requirements.txt file
         pip install -r requirements.txt

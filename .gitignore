@@ -2,7 +2,7 @@
 
 # ====== Dependencies ======
 frontend/node_modules/
-Backend/quiz/env/
+backend/quiz/env/
 
 # ====== Python Cache & Virtual Environment ======
 **/__pycache__/
@@ -10,12 +10,12 @@ Backend/quiz/env/
 **/*.pyo
 **/*.pyd
 **/*.log
-Backend/quiz/venv/
-Backend/quiz/.venv/
+backend/quiz/venv/
+backend/quiz/.venv/
 
 # ====== Database & Migrations ======
-Backend/quiz/db.sqlite3
-Backend/quiz/quiz_api/migrations/
+backend/quiz/db.sqlite3
+backend/quiz/quiz_api/migrations/
 
 # ====== Frontend Build Files ======
 frontend/build/
