@@ -41,15 +41,15 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r backend/requirements.txt
+          pip install -r Backend/requirements.txt
 
       - name: Run Django Migrations
         run: |
-          python backend/manage.py migrate
+          python Backend/manage.py migrate
 
       - name: Run Tests
         run: |
-          python backend/manage.py test
+          python Backend/manage.py test
 
       - name: Build & Push Docker Image
         run: |
