@@ -25,6 +25,9 @@ FROM python:3.13-slim
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
+# Set the Django settings module
+ENV DJANGO_SETTINGS_MODULE=quiz.quiz.settings
+
 # Create app directory
 WORKDIR /app
 
